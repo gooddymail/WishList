@@ -146,8 +146,7 @@
 				TargetAttributes = {
 					812E5AE41E1E2F3800720699 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2S2U2UJK3M;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					812E5AF81E1E2F3900720699 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -339,7 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2S2U2UJK3M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WishList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kpoolpipat.WishList;
@@ -352,7 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2S2U2UJK3M;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WishList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kpoolpipat.WishList;
