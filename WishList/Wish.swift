@@ -25,4 +25,11 @@ class Wish: Object {
       realm.add(self)
     }
   }
+  
+  func update(details: String) {
+    let realm = try! Realm()
+    try! realm.write {
+      self.details = details
+    }
+  }
 }

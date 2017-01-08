@@ -12,6 +12,9 @@ import RealmSwift
 
 class WishTests: XCTestCase {
   
+  let defaultWishDetails = "One day i will have my own cake store"
+  let updatedWishDetails = "One day i will have a happy family"
+  
   override func setUp() {
     super.setUp()
     
@@ -28,19 +31,32 @@ class WishTests: XCTestCase {
   }
   
   func testWishInitailizer() {
-    let wish = Wish(details: "One day i will have my own cake store")
+    let wish = Wish(details: defaultWishDetails)
     
-    XCTAssertEqual(wish.details, "One day i will have my own cake store")
+    XCTAssertEqual(wish.details, defaultWishDetails)
   }
   
   func testSaveWish() {
-    let wish = Wish(details: "One day i will have my own cake store")
+    let wish = Wish(details: defaultWishDetails)
     
     wish.save()
     
     let realm = try! Realm()
-    
     let wishFromDatabase = realm.objects(Wish.self).last
+    
     XCTAssertEqual(wishFromDatabase?.details, wish.details)
+  }
+  
+  func testUpdateWish() {
+    let wish = Wish(details: defaultWishDetails)
+    wish.save()
+    
+    wish.update(details: updatedWishDetails)
+    
+    let realm = try! Realm()
+    let wishFromDatabase = realm.objects(Wish.self).last
+    
+    XCTAssertEqual(wish.details, updatedWishDetails)
+    XCTAssertEqual(wishFromDatabase?.details, updatedWishDetails)
   }
 }
