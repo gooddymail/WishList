@@ -32,4 +32,15 @@ class WishTests: XCTestCase {
     
     XCTAssertEqual(wish.details, "One day i will have my own cake store")
   }
+  
+  func testSaveWish() {
+    let wish = Wish(details: "One day i will have my own cake store")
+    
+    wish.save()
+    
+    let realm = try! Realm()
+    
+    let wishFromDatabase = realm.objects(Wish.self).last
+    XCTAssertEqual(wishFromDatabase?.details, wish.details)
+  }
 }

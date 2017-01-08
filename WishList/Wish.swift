@@ -18,4 +18,11 @@ class Wish: Object {
     
     self.details = details
   }
+  
+  func save() {
+    let realm = try! Realm()
+    try! realm.write {
+      realm.add(self)
+    }
+  }
 }
