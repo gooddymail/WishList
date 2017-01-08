@@ -32,4 +32,11 @@ class Wish: Object {
       self.details = details
     }
   }
+  
+  func delete() {
+    let realm = try! Realm()
+    try! realm.write {
+      realm.delete(self)
+    }
+  }
 }

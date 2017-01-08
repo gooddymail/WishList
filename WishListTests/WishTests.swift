@@ -59,4 +59,15 @@ class WishTests: XCTestCase {
     XCTAssertEqual(wish.details, updatedWishDetails)
     XCTAssertEqual(wishFromDatabase?.details, updatedWishDetails)
   }
+  
+  func testDeleteWish() {
+    let wish = Wish(details: defaultWishDetails)
+    wish.save()
+    
+    let realm = try! Realm()
+    XCTAssertEqual(realm.objects(Wish.self).count, 1)
+    
+    wish.delete()
+    XCTAssertEqual(realm.objects(Wish.self).count, 0)
+  }
 }
