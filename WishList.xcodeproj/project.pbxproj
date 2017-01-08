@@ -10,7 +10,6 @@
 		319943E976BFF4BEF9A0BE95 /* Pods_WishListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DEA34D28B49A84321A3BA5 /* Pods_WishListTests.framework */; };
 		46F934974BB334622ED8D0B5 /* Pods_WishList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712D8D5C70568504720975E5 /* Pods_WishList.framework */; };
 		812E5AE91E1E2F3900720699 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E5AE81E1E2F3900720699 /* AppDelegate.swift */; };
-		812E5AEB1E1E2F3900720699 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E5AEA1E1E2F3900720699 /* ViewController.swift */; };
 		812E5AEE1E1E2F3900720699 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812E5AEC1E1E2F3900720699 /* Main.storyboard */; };
 		812E5AF01E1E2F3900720699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812E5AEF1E1E2F3900720699 /* Assets.xcassets */; };
 		812E5AF31E1E2F3900720699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 812E5AF11E1E2F3900720699 /* LaunchScreen.storyboard */; };
@@ -37,7 +36,6 @@
 		743C6E5787620363C8277950 /* Pods-WishList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WishList/Pods-WishList.debug.xcconfig"; sourceTree = "<group>"; };
 		812E5AE51E1E2F3900720699 /* WishList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		812E5AE81E1E2F3900720699 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		812E5AEA1E1E2F3900720699 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		812E5AED1E1E2F3900720699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		812E5AEF1E1E2F3900720699 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		812E5AF21E1E2F3900720699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				8192A4611E1F970000F83B30 /* Helper */,
 				8192A45C1E1F930100F83B30 /* Model */,
 				812E5AE81E1E2F3900720699 /* AppDelegate.swift */,
-				812E5AEA1E1E2F3900720699 /* ViewController.swift */,
 				812E5AEC1E1E2F3900720699 /* Main.storyboard */,
 				812E5AEF1E1E2F3900720699 /* Assets.xcassets */,
 				812E5AF11E1E2F3900720699 /* LaunchScreen.storyboard */,
@@ -374,7 +371,6 @@
 			files = (
 				8192A4601E1F946800F83B30 /* User.swift in Sources */,
 				8192A4681E1F97F200F83B30 /* MyWishViewController.swift in Sources */,
-				812E5AEB1E1E2F3900720699 /* ViewController.swift in Sources */,
 				8192A4651E1F971A00F83B30 /* FXBlurView.m in Sources */,
 				8192A45E1E1F931C00F83B30 /* Wish.swift in Sources */,
 				812E5AE91E1E2F3900720699 /* AppDelegate.swift in Sources */,
