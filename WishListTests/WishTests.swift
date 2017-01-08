@@ -8,6 +8,7 @@
 
 import XCTest
 import RealmSwift
+@testable import WishList
 
 class WishTests: XCTestCase {
   
@@ -26,16 +27,9 @@ class WishTests: XCTestCase {
     }
   }
   
-  func testExample() {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+  func testWishInitailizer() {
+    let wish = Wish(details: "One day i will have my own cake store")
+    
+    XCTAssertEqual(wish.details, "One day i will have my own cake store")
   }
-  
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
-    }
-  }
-  
 }

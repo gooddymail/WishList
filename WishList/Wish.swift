@@ -10,10 +10,12 @@ import Foundation
 import RealmSwift
 
 class Wish: Object {
+  
+  dynamic var details = ""
+  
+  convenience init(details: String) {
+    self.init()
     
-// Specify properties to ignore (Realm won't persist these)
-    
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    self.details = details
+  }
 }
