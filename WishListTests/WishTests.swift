@@ -70,4 +70,19 @@ class WishTests: XCTestCase {
     wish.delete()
     XCTAssertEqual(realm.objects(Wish.self).count, 0)
   }
+  
+  func createWish(number: Int) {
+    for _ in 0..<number {
+      let wish = Wish(details: defaultWishDetails)
+      wish.save()
+    }
+  }
+  
+  func testGetAllWish() {
+    createWish(number: 3)
+    
+    let wishs = Wish.all()
+    
+    XCTAssertEqual(wishs.count, 3)
+  }
 }

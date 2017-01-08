@@ -13,6 +13,11 @@ class Wish: Object {
   
   dynamic var details = ""
   
+  class func all() -> Results<Wish> {
+    let realm = try! Realm()
+    return realm.objects(Wish.self)
+  }
+  
   convenience init(details: String) {
     self.init()
     
