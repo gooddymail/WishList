@@ -12,6 +12,7 @@ import RealmSwift
 class Wish: Object {
   
   dynamic var details = ""
+  dynamic var createDate = NSDate()
   
   class func all() -> Results<Wish> {
     let realm = try! Realm()

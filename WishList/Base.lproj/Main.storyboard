@@ -55,7 +55,7 @@
                                             <constraint firstItem="ZvD-RD-Dxa" firstAttribute="top" secondItem="KoD-QT-M3R" secondAttribute="top" id="wrm-fP-JCw"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MqM-8I-ZY3">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MqM-8I-ZY3">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <view key="tableHeaderView" contentMode="scaleToFill" id="w7A-Ua-Zhq">
@@ -94,6 +94,42 @@
                                                 <constraint firstAttribute="bottom" secondItem="GSc-nT-j7z" secondAttribute="bottom" id="qsI-Ac-9lA"/>
                                             </constraints>
                                         </view>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="wishCell" rowHeight="80" id="pyy-ag-fw7" customClass="WishTableViewCell" customModule="WishList" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="219" width="375" height="80"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pyy-ag-fw7" id="Zrb-Bb-zMe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEm-qC-ysQ">
+                                                            <rect key="frame" x="10" y="10" width="355" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-qA-z8T">
+                                                            <rect key="frame" x="334.5" y="51" width="30.5" height="18.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="6dM-qA-z8T" firstAttribute="top" secondItem="eEm-qC-ysQ" secondAttribute="bottom" constant="20" id="HOZ-iY-hdd"/>
+                                                        <constraint firstItem="eEm-qC-ysQ" firstAttribute="leading" secondItem="Zrb-Bb-zMe" secondAttribute="leading" constant="10" id="Mg5-go-dmQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="eEm-qC-ysQ" secondAttribute="trailing" constant="10" id="XdO-Qv-gz9"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6dM-qA-z8T" secondAttribute="bottom" constant="10" id="aQ6-yd-Ghx"/>
+                                                        <constraint firstItem="eEm-qC-ysQ" firstAttribute="top" secondItem="Zrb-Bb-zMe" secondAttribute="top" constant="10" id="eKk-FW-AS1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6dM-qA-z8T" secondAttribute="trailing" constant="10" id="iBg-gg-BXH"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="createDateLabel" destination="6dM-qA-z8T" id="EA6-d9-Tkz"/>
+                                                    <outlet property="wishDetailLabel" destination="eEm-qC-ysQ" id="slx-l4-qql"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="mwK-Pu-2v5"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="Tdu-EH-zQT"/>
@@ -115,7 +151,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qy5-SR-9vf">
-                                        <rect key="frame" x="303" y="25" width="62" height="30"/>
+                                        <rect key="frame" x="299" y="25" width="66" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="add wish">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -140,6 +177,7 @@
                             <constraint firstAttribute="trailing" secondItem="Yva-D2-v99" secondAttribute="trailing" id="mB4-iz-9dc"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="avatarImage" destination="ZHp-iL-17b" id="0qk-TN-16c"/>
                         <outlet property="header" destination="KoD-QT-M3R" id="qeq-S0-qL1"/>

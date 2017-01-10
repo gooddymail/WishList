@@ -69,11 +69,15 @@ class MyWishViewController: UIViewController {
 extension MyWishViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return Wish.all().count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "wishCell", for: indexPath) as! WishTableViewCell
+    
+    let wish = Wish.all()[indexPath.row]
+    cell.wishDetailLabel.text = wish.details
+    cell.createDateLabel.text = "- \(wish.createDate)"
     
     return cell
   }
