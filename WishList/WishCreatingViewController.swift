@@ -37,6 +37,14 @@ class WishCreatingViewController: UIViewController {
   }
   
   @IBAction func saveTapped(_ sender: Any) {
+    createNewWish()
+    self.dismiss(animated: true, completion: nil)
+  }
+  
+  func createNewWish() {
+    let wish = Wish(details: wishDetailsTextView.text)
+    
+    wish.save()
   }
   /*
    // MARK: - Navigation

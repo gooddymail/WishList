@@ -36,6 +36,12 @@ class MyWishViewController: UIViewController {
     configViewElement()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    tableView.reloadData()
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -50,7 +56,9 @@ class MyWishViewController: UIViewController {
     
     headerBlurImageView.image = UIImage(named: "header_bg")?.blurredImage(withRadius: 10, iterations: 20, tintColor: UIColor.clear)
     headerBlurImageView.alpha = 0.0
-
+    
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 80
   }
   
   
@@ -77,7 +85,7 @@ extension MyWishViewController: UITableViewDataSource {
     
     let wish = Wish.all()[indexPath.row]
     cell.wishDetailLabel.text = wish.details
-    cell.createDateLabel.text = "- \(wish.createDate)"
+    cell.createDateLabel.text = "- \(wish.createDateString)"
     
     return cell
   }
